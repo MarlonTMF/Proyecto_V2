@@ -1,5 +1,6 @@
 import ejecutarSecuencia from "./auto.js"
 
+describe('Simulador de Autitos', () => {
 test('Debe mostrar la posición inicial del auto', () => {
     expect(ejecutarSecuencia('5,5/1,2N/')).toBe('1,2N');
   });
@@ -16,4 +17,10 @@ test('Debe avanzar correctamente', () => {
   });
 test('Debe omitir comandos que hacen que el auto se salga del grid', () => {
     expect(ejecutarSecuencia('5,5/1,2N/AAAAAAAAA')).toBe('1,5N');
-  });
+  });
+
+test('Debe devolver la posición final correcta para el ejemplo 1', () => {
+  expect(ejecutarSecuencia('5,5/1,2N/IAIAIAIAA')).toBe('1,3N');
+  });
+
+});
