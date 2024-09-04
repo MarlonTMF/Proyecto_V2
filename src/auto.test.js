@@ -14,3 +14,6 @@ test('Debe girar a la izquierda correctamente', () => {
 test('Debe avanzar correctamente', () => {
     expect(ejecutarSecuencia('5,5/1,2N/ADIIIDA')).toBe('0,3O');
   });
+test('Debe omitir comandos que hacen que el auto se salga del grid', () => {
+    expect(ejecutarSecuencia('5,5/1,2N/AAAAAAAAA')).toBe('1,5N');
+  });

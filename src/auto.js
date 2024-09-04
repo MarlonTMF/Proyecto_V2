@@ -9,9 +9,12 @@ function ejecutarSecuencia(comandos){
         } else if(comando === 'I'){
             direccion = girarIzquierda(direccion);
         } else if (comando === 'A') {
+
             let [nuevoX, nuevoY] = avanzar(x, y, direccion);
-            if (nuevoX >= 0 && nuevoX <= maxX && nuevoY >= 0 && nuevoY <= maxY) {
-              [x, y] = [nuevoX, nuevoY];
+            
+
+             if (nuevoX >= 0 && nuevoX <= maxX && nuevoY >= 0 && nuevoY <= maxY) {
+                [x, y] = [nuevoX, nuevoY];
             }
         }
     }
@@ -35,4 +38,5 @@ function girarDerecha(direccion) {
     else if (direccion === 'O') x--;
     return [x, y];
   }
+
 export default ejecutarSecuencia;
