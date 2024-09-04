@@ -18,7 +18,9 @@ function ejecutarSecuencia(comandos){
 
     return `${x},${y}${direccion}`;
 }
-//comandos para movimiento y direccion
+
+//funciones para movimiento y direccion
+
 function girarDerecha(direccion) {
     const giros = { 'N': 'E', 'E': 'S', 'S': 'O', 'O': 'N' };
     return giros[direccion];
