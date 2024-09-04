@@ -7,3 +7,6 @@ test('Debe mostrar la posición inicial del auto', () => {
 test('Debe girar a la derecha correctamente', () => {
   expect(ejecutarSecuencia('5,5/1,2N/DDD')).toBe('1,2O');
   });
+test('Debe girar a la izquierda correctamente', () => {
+    expect(ejecutarSecuencia('5,5/1,2N/III')).toBe('1,2E');
+  });

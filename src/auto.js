@@ -6,6 +6,8 @@ function ejecutarSecuencia(comandos){
     for (let comando of secuencia) {
         if (comando === 'D') {
           direccion = girarDerecha(direccion);
+        } else if(comando === 'I'){
+            direccion = girarIzquierda(direccion);
         }
     }
 
@@ -14,6 +16,10 @@ function ejecutarSecuencia(comandos){
 
 function girarDerecha(direccion) {
     const giros = { 'N': 'E', 'E': 'S', 'S': 'O', 'O': 'N' };
+    return giros[direccion];
+  }
+  function girarIzquierda(direccion) {
+    const giros = { 'N': 'O', 'O': 'S', 'S': 'E', 'E': 'N' };
     return giros[direccion];
   }
 
