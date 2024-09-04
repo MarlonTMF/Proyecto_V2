@@ -10,3 +10,7 @@ test('Debe girar a la derecha correctamente', () => {
 test('Debe girar a la izquierda correctamente', () => {
     expect(ejecutarSecuencia('5,5/1,2N/III')).toBe('1,2E');
   });
+
+test('Debe avanzar correctamente', () => {
+    expect(ejecutarSecuencia('5,5/1,2N/ADIIIDA')).toBe('0,3O');
+  });
